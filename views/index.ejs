@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Group Project 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>Paradise Donut Company</h1>
+        <h3>All Donuts</h3>
+    </div>
+    <div class="container">
+        <div class="row" style="text-align: center;">
+            <div class="col-2">
+                <h4>All</h4>
+            </div>
+            <div class="col-2">
+                <h4>Iced</h4>
+            </div>
+            <div class="col-2">
+                <h4>Glazed</h4>
+            </div>
+            <div class="col-2">
+                <h4>Filled</h4>
+            </div>
+            <div class="col-2">
+                <h4>Cake</h4>
+            </div>
+            <div class="col-2">
+                <h4>Chocolate</h4>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+            <div class="row">
+                <% for (let i=0;i < aDonutList.length; i++) { %>
+                <div class="col-4">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="<%= aDonutList[i].image_url %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">
+                                <%= aDonutList[i].name %>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
